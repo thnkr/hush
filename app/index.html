@@ -1,0 +1,94 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/hushserver.css">
+</head>
+<body>
+<script type="text/x-handlebars">
+    <div class="container main">
+        <div class="row">
+            <div class=col-md-3">
+                <div class="form-group">
+                    <label for="activeKey" class="col-sm-2 control-label">Hush Baby</label>
+                    <div class="col-sm-10">
+                        <p class="descrypt-tag pull-left">Decrypt Key </p><input type="text" class="form-control decrypt" id="activeKey" placeholder="No key assigned...">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control submission" placeholder="Message or link...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default generateKeys" type="button" {{action 'generateKeys'}}>Write Log</button>
+                    </span>
+                </div>
+                <br>
+
+                <div class="crypt-container">
+                    {{#if crypt}}
+                    <div class="details">
+
+                        <ul class="crypt-details">
+                            <li>
+                                <span class="crypt-text label"> Origin </span> {{crypt.ip}} <small>(<a {{bind-attr href=crypt.uri}}>JSON</a>)</small>
+                            </li>
+                            <li>
+                                <span class="crypt-text label"> Created </span> {{crypt.created}}
+                            </li>
+                            <li>
+                                <h6 class="crypt-text label">Public Key/URI  <small>{{crypt.uri}}</small></h6>
+                            </li>
+
+                        </ul>
+                        <ul class="crypt-details">
+                            <li>
+                                <span class="crypt-text label"> Message </span> {{urls crypt.message}}
+                            </li>
+                        </ul>
+                        <p class="crypt-details"> </p>
+                    </div>
+                    {{/if}}
+                </div>
+
+
+                <div class="col-md-3 pull-left">
+                    <div class="progress-bar keypad-bar pull-left" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" {{bind-attr style=keyCounter}}></div>
+                    <div>
+                    {{#each key in keypad}}
+                    <a type="button" class="btn btn-default pull-left keypad" {{action 'addKey' key}}> {{key}} </a>
+                    {{/each}}
+                        {{#each key in keys}}
+                            <a type="button" class="btn btn-small keypad-small" {{action 'deleteKey' key}}> {{key.data}} </a>
+                        {{/each}}
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-md-8">
+
+                <ul class="crypt-list">
+                    {{#each crypt in crypts}}
+                    <li>
+                        {{#if crypt.decrypted}}
+                            <span class="truncate-tag">{{truncate_tag crypt.tag}}</span> - <a type="button" href="#" {{action 'getCrypt' crypt.uri}}> {{truncate crypt.message}}</a> - <a type="button" href="#" {{action 'commentCrypt' crypt.uri}} class="truncate-tag"> Comment </a>
+                        {{else}}
+                            <span class="truncate-tag">{{truncate_tag crypt.tag}}</span> - {{truncate crypt.message}} -  <button type="button" {{bind-attr id=crypt.uri}} {{action 'submitKey' crypt.uri}} class="truncate-tag"> Decrypt </button>
+                        {{/if}}
+                    </li>
+
+                    {{/each}}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</script>
+</body>
+<script type="text/javascript" src="public/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="public/js/handlebars-1.1.2.js"></script>
+<script type="text/javascript" src="public/js/ember-1.5.1.js"></script>
+<script data-main="public/js/init" src="public/js/require.js"></script>
+<script type="text/javascript" src="public/js/app.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,80 @@
+.main {
+    margin-top: 40px;
+}
+
+.decrypt {
+    max-width: 30%;
+    border: none;
+    font-size: 10pt;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.generateKeys {
+    background-color: #d3d6db;
+    font-color: #fff;
+}
+
+.truncate-tag {
+    font-weight: 500;
+    font-size: 8pt;
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    color: dimgrey;
+}
+
+.descrypt-tag {
+    font-size: 8pt;
+    color: lightgray;
+    display: inline-block;
+}
+
+.keypad {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 1px;
+}
+
+.keypad-bar {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    max-width: 236px;
+    max-height: 236px;
+    float: left;
+    z-index: -500;
+    position: absolute;
+}
+
+.keypad-small {
+    height: 30px;
+    width: 30px;
+}
+
+.crypt-list {
+     margin-left: -56px;
+     list-style-type: none;
+     position: relative;
+ }
+
+.crypt-container {
+
+    background-color: #dcdcdc;
+    max-width: 100%;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+.crypt-details {
+    margin-top: 4px;
+    list-style-type: none;
+
+}
+
+.crypt-text {
+    font-weight: 500;
+    font-size: 8pt;
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    color: dimgrey;
+}
