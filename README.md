@@ -9,11 +9,15 @@ https://medium.com/p/69ed8ce5628d
 - The server: https://github.com/thnkr/hush/blob/master/server.js
 
 ## Instructions
-(1) - Generate your SALT by clicking keys on the keypad. A minimum of six is required. 
-(2) - Write a message in the text box. The message can include links which will be converted to HTML. It does not support markdown or formatting.
-(3) - Click "Write Log" and a key will appear above the text box and your message will show up encrypted in the log below. If you have trouble finding it you can always search for your tag within the page. 
-(4) - Leave your key in the text box and click "Decrypt" to release your message to the public. OR retain your private key and decrypt it later. The database has no retention of your message, it was never sent the server. 
-(5) - To verify the integrity and security of this project feel free to review the process listed below or dig into the source files.
+1. Generate your SALT by clicking keys on the keypad. A minimum of six is required. 
+
+2. Write a message in the text box. The message can include links which will be converted to HTML. It does not support markdown or formatting.
+
+3. Click "Write Log" and a key will appear above the text box and your message will show up encrypted in the log below. If you have trouble finding it you can always search for your tag within the page. 
+
+4. Leave your key in the text box and click "Decrypt" to release your message to the public. OR retain your private key and decrypt it later. The database has no retention of your message, it was never sent the server. 
+
+5. To verify the integrity and security of this project feel free to review the process listed below or dig into the source files.
 
 ### Security (Encryption)
 https://github.com/thnkr/hush/blob/master/app/public/js/app.js#L243
