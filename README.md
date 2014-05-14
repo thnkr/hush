@@ -1,4 +1,4 @@
-Hush Baby
+Hush Baby https://www.hushbaby.org
 =========
 Basic messaging service to retain the thoughts of a small group of people.
 
