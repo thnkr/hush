@@ -2,12 +2,13 @@ Hush Baby
 =========
 Basic messaging service to retain the thoughts of a small group of people.
 
-Philosophy behind this project: https://medium.com/p/69ed8ce5628d
 
-- Local libary encryptions with AES, SALT generated with keypad.  
-- Dependant on Forge: https://github.com/digitalbazaar/forge
-- The local app: https://github.com/thnkr/hush/blob/master/app/public/js/app.js
-- The server: https://github.com/thnkr/hush/blob/master/server.js
+### All posts encrypted locally and stored only as hashes. 
+### Anonymous posting except for IP (use www.hidemyass.com proxies if you are concerned)
+### Decrypt content whenever you want, a private key is issued with every message.
+### Go ahead and review the code, it's all there.
+
+Read more about the philosophy behind this: https://medium.com/p/69ed8ce5628d
 
 ## Instructions
 1. Generate your SALT by clicking keys on the keypad. A minimum of six is required. 
