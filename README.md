@@ -1,12 +1,13 @@
-Hush Baby https://www.hushbaby.org
+Hush Baby 
 =========
+https://www.hushbaby.org
 Basic messaging service to retain the thoughts of a small group of people.
 
 
-#### All posts encrypted locally and stored only as hashes. 
-#### Anonymous posting except for IP (use www.hidemyass.com proxies if you are concerned).
-#### Decrypt content whenever you want, a private key is issued with every message.
-#### Go ahead and review the code, it's all there.
+**All posts encrypted locally and stored only as hashes.**
+**Anonymous posting, no author attributes are retained beyond the keys.**
+**Decrypt content whenever you want, private key issued with every message.**
+**Go ahead and review the code, it's open source.**
 
 Read more about the philosophy behind this: https://medium.com/p/69ed8ce5628d
 
